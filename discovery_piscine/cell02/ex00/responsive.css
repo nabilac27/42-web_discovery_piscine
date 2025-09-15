@@ -1,0 +1,23 @@
+body {
+    display: flex;
+    justify-content: center;
+}
+
+table {
+    border: solid black;
+    height: 100px;
+}
+
+.cell-left {
+    background-color: rgb(103, 185, 218);
+    width: 400px;
+    text-align: center;
+    font-family: monospace;
+}
+
+.cell-right {
+    background-color: rgb(222, 134, 216);
+    width: 400px;
+    text-align: center;
+    font-family: monospace;
+}

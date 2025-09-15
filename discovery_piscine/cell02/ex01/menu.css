@@ -1,0 +1,46 @@
+/*
+    100 vh: 100% of the viewport height
+*/
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: whitesmoke;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.menu {
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 1px 10px 15px 1px grey;
+    padding: 18px;
+    width: 250px;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-name {
+    background-color: darkred; 
+    color: white;
+    padding: 12px;
+    font-size: 20px;
+    width: 100%;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px;
+    text-decoration: none;
+    display: block;
+    font-size: 18px;
+}
