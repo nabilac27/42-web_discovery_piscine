@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile Card</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: #f4f4f4;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .card {
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            padding: 20px;
+            text-align: center;
+            width: 250px;
+        }
+
+        .card-title {
+            margin-bottom: 10px;
+        }
+
+        .profile-pic {
+            border-radius: 50%;
+        }
+
+        .login {
+            font-weight: bold;
+            margin-top: 10px;
+        }
+
+        .description {
+            font-size: 0.9em;
+            color: gray;
+            margin: 5px 0 10px 0;
+        }
+
+        .socials img {
+            margin: 0 5px;
+            cursor: pointer;
+        }
+
+        .contact-btn {
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            padding: 8px 12px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .contact-btn:hover {
+            background-color: #0056b3;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <h2 class="card-title">My Profile</h2>
+
+        <table>
+            <tr>
+                <td class="profile-pic-cell">
+                    <img src="https://via.placeholder.com/100" alt="Profile Picture" class="profile-pic">
+                </td>
+            </tr>
+            <tr>
+                <td class="login">nabila42</td>
+            </tr>
+            <tr>
+                <td class="description">Aspiring Developer</td>
+            </tr>
+            <tr>
+                <td class="socials">
+                    <img src="https://via.placeholder.com/20" alt="Twitter">
+                    <img src="https://via.placeholder.com/20" alt="LinkedIn">
+                    <img src="https://via.placeholder.com/20" alt="GitHub">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <button class="contact-btn">Contact</button>
+                </td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>

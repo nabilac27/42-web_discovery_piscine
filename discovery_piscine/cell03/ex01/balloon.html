@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <title>Balloon</title>
+    <style>
+        body {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            flex-direction: column-reverse;
+
+            /* night sky gradient */
+            background: radial-gradient(circle at 50% 50%, #1b2735, #090a0f); 
+
+            /* morning sky gradient */
+            /* background: linear-gradient(to top, #FFDEE9, #B5FFFC); */
+
+            /* neutral gradient */
+            /* background: blanchedalmond; */
+
+            /* background-size: cover; */
+        }
+
+        .balloon {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            margin: 0 auto 10px;
+            box-shadow: 0 0 17px rgba(0, 0, 0, 5);
+        }
+
+        .red {
+            background-color: red;
+        }
+
+        .green {
+            background-color: green;
+        }
+
+        .blue {
+            background-color: blue;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="balloon red" id="balloon" onclick="click_balloon()" onmouseleave="leave_balloon_hover()"></div>
+
+    <script>
+        function bigger_balloon() {
+            var balloon = document.getElementById("balloon").classList
+            if (balloon.contains("red")) {
+                balloon.remove("red");
+                balloon.add("green");
+            } else if (balloon.contains("green")) {
+                balloon.remove("green");
+                balloon.add("blue");
+            } else if (balloon.contains("blue")) {
+                balloon.remove("blue");
+                balloon.add("red");
+            }
+        }
+
+        function smaller_balloon() {
+            var balloon = document.getElementById("balloon").classList
+            if (balloon.contains("red")) {
+                balloon.remove("red");
+                balloon.add("blue");
+            } else if (balloon.contains("blue")) {
+                balloon.remove("blue");
+                balloon.add("green");
+            } else if (balloon.contains("green")) {
+                balloon.remove("green");
+                balloon.add("red");
+            }
+        }
+
+        function click_balloon() {
+            var balloon = document.getElementById("balloon");
+            bigger_balloon();
+            if (balloon.style.width <= "420") {
+                balloon.style.width = (balloon.offsetWidth + 10) + "px";
+                balloon.style.height = (balloon.offsetHeight + 10) + "px";
+            } else {
+                balloon.style.width = "200px";
+                balloon.style.height = "200px";
+            }
+        }
+
+        function leave_balloon_hover() {
+            var balloon = document.getElementById("balloon");
+            smaller_balloon();
+            if (balloon.offsetWidth > 200) {
+                balloon.style.width = (balloon.offsetWidth - 5) + "px";
+            } else {
+                balloon.style.width = "200px";
+            }
+            if (balloon.offsetHeight > 200) {
+                balloon.style.height = (balloon.offsetHeight - 5) + "px";
+            } else {
+                balloon.style.height = "200px";
+            }
+        }
+    </script>
+
+</body>
+
+</html>
+
+<!-- 
+    JavaScript Function to HTML Events
+        HTML events are "things" that happen to HTML elements
+        syntax: <element event="JavaScript function">
+
+    onclick Event
+        call a function when the user clicks a button
+        syntax: <button onclick="myFunction()">Click me</button>
+
+    onmouseleave Event
+        call a function when the mouse pointer leaves the HTML element
+        <div onmouseleave="myFunction()">Mouse over me</div>
+
+
+    HTML DOM
+    DOM = Document Object Model
+    - to access HTML elements with JavaScript, you have to find the elements first.
+    - for example: by id, class, class, CSS selectors
+
+    Get element by ID
+        syntax: document.getElementById("demo");
+
+    classList property returns the CSS classnames of an element.
+        syntax:     listname = element.classList;
+                    listname.add("myStyle");
+        properties: add(), contains(), remove(), length()
+
+    offsetWidth
+        The offsetWidth property returns the viewable width of an element (in pixels) 
+        including padding, border and scrollbar
+-->
