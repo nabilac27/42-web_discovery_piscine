@@ -1,39 +1,53 @@
 <!DOCTYPE html>
+
 <html lang="en">
-
-<head>
+  <head>
     <title>Basics</title>
-</head>
+    <style>
+        body {
+            background-color: #ff77aa;
+            text-align: center;
+            font-family: monospace;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        div {
+            display: inline-block;
+            text-align: center;
+            margin: 10px;
+        }
+        img {
+            display: block;
+            margin-bottom: 10px;
+            border-radius: 6px;
+            box-shadow: 0 10px 16px rgba(0,0,0,0.3), 0 0 0 2px #ff77aa;
+        }
+        p {
+            text-align: right;
+            font-style: italic;
+        }
+    </style>
+  </head>
 
-<body style="background-color: #FF77AA; text-align: center;">
-    
-    <!-- Page Title -->
-    <h1 style="color: white; font-family: monospace;">% Walmart vs Target %</h1>
+  <body>
+    <h1>% Walmart vs Target %</h1>
 
-    <!-- Walmart Div -->
-    <div style="display: inline-block; text-align: center; margin: 10px;">
-        <img src="./walmart.png" height="200" style="display: block; margin-bottom: 10px;">
-        <a href="https://walmart.com" style="color: white;">Walmart</a>
+    <div>
+      <img src="./walmart.png" height="200" />
+      <a href="https://walmart.com">Walmart</a>
     </div>
-    
-    <!-- Target Div -->
-    <div style="display: inline-block; text-align: center; margin: 10px;">
-        <img src="./target.png" height="200" style="display: block; margin-bottom: 10px;">
-        <a href="https://target.com" style="color: white;">Target</a>
+
+    <div>
+      <img src="./target.png" height="200" />
+      <a href="https://target.com">Target</a>
     </div>
 
-    <!-- Horizontal Line -->
     <hr>
 
-    <!-- Footer -->
-    <div style="text-align: right; color: white; font-family: monospace; font-style: italic; ">
-        &copy; nchairun, 2025
-    </div>
-
-</body>
-
-
+    <p>&copy; nchairun, 2025</p>
+  </body>
 </html>
+
 
 
 <!-- 

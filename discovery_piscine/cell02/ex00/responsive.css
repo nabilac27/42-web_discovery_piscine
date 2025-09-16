@@ -1,23 +1,26 @@
 body {
-    display: flex;
-    justify-content: center;
+    display:flex; 
+    justify-content:center;
+    font-family: monospace;
+    color: whitesmoke;
+    text-shadow: 2px 2px 4px rgba(0,0,0,5);
 }
-
 table {
     border: solid black;
-    height: 100px;
+    border-collapse: collapse;
+    height: 100px; 
+    width: 800px; 
 }
-
-.cell-left {
-    background-color: rgb(103, 185, 218);
-    width: 400px;
-    text-align: center;
-    font-family: monospace;
+td {
+    border: solid black;
+    width: 400px; 
+    text-align: center; 
 }
-
-.cell-right {
-    background-color: rgb(222, 134, 216);
-    width: 400px;
-    text-align: center;
-    font-family: monospace;
+.cell_left
+{
+    background-color:  #3C3C3C;
+}
+.cell_right
+{
+    background-color: #DAB732;
 }

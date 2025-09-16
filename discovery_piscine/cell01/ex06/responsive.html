@@ -1,24 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <title>Responsive</title>
+    <title>Tab</title>
+    <style>
+        body {
+            display:flex; 
+            justify-content:center;
+            font-family: monospace;
+            color: whitesmoke;
+            text-shadow: 2px 2px 4px rgba(0,0,0,5);
+        }
+        table {
+            border: solid black;
+            border-collapse: collapse;
+            height: 100px; 
+            width: 800px; 
+        }
+        td {
+            border: solid black;
+            width: 400px; 
+            text-align: center; 
+        }
+        .cell_left
+    {
+        background-color:  #3C3C3C;
+    }
+    .cell_right
+    {
+        background-color: #DAB732;
+    }
+    </style>
 </head>
-
-<body style="display:flex; justify-content:center;">
-    <table style="border: solid black; height: 100px;">
+<body>
+    <table>
         <tr>
-            <td style="background-color: rgb(103, 185, 218); width: 400px; text-align: center; font-family: monospace;">
-                <h1>HELLO</h1>
-            </td>
-            <td style="background-color: rgb(222, 134, 216); width: 400px; text-align: center; font-family: monospace;">
-                <h1>WORLD</h1>
-            </td>
+            <td class="cell_left"><h1>HELLO</h1></td>
+            <td class="cell_right"><h1>WORLD</h1></td>
         </tr>
     </table>
 </body>
-
 </html>
+
 
 <!-- 
     CSS Display Property | https://www.w3schools.com/cssref/pr_class_display.php
