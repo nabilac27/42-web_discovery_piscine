@@ -9,20 +9,20 @@ body {
 }
 
 button {
-    background-color: #0F235A;
+    background-color: #ad1e1e;;
     color: white;
     text-shadow: 2px 2px 4px rgba(0,0,0,3);
     padding: 15px;
     font-size: 16px;
     height: 50px;
-    width: 250px;
+    width: 400px;
     border: none; 
-    border-radius: 5px;
+    /* border-radius: 5px; */
     box-shadow: 0 10px 16px rgba(0,0,0,0.3);
 }
 
 button:hover {
-    background-color: #0A1946; 
+    background-color: #d04a4a;; 
     transform: translateY(-2px);
 }
 
@@ -44,12 +44,12 @@ button:hover {
 
 .dropdown-content a {
     color: whitesmoke;
-    background-color: #FFD700;
+    background-color: #ad1e1e;
     display: block;
 }
 
 .dropdown-content a:hover {
-    background-color: #f4e972; 
+    background-color: #ede9c5; 
     color: #1d1d1d; 
 }
 

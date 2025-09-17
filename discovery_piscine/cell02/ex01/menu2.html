@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>SNCF Sandwich</title>
+    <style>
+        body {
+            font-family: monospace;
+            background: #c54444;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .dropdown {
+            position: relative;
+            width: 250px;
+        }
+
+        .dropdown-btn {
+            background: white;
+            border: none;
+            border-radius: 10px;
+            padding: 20px;
+            width: 100%;
+            text-align: left;
+            font-size: 16px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            top: 110%;
+            left: 0;
+            background: white;
+            border-radius: 10px;
+            width: 100%;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+            padding: 10px 0;
+            z-index: 100;
+            pointer-events: none;
+        }
+
+        .dropdown:hover .dropdown-content,
+        .dropdown:focus-within .dropdown-content {
+            display: block;
+            pointer-events: auto;
+        }
+
+        .dropdown-content a {
+            display: flex;
+            align-items: center;
+            padding: 10px 15px;
+            text-decoration: none;
+            color: #333;
+            font-size: 15px;
+            transition: background 0.2s ease;
+            cursor: default;
+        }
+
+        .dropdown-content a:hover {
+            background: #f2f2f2;
+        }
+
+        .arrow {
+            transition: transform 0.2s ease;
+        }
+
+        .dropdown:hover .arrow,
+        .dropdown:focus-within .arrow {
+            transform: rotate(180deg);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="dropdown" tabindex="0">
+        <button class="dropdown-btn">
+            SNCF Sandwich Menu
+            <div class="arrow">▲</div>
+        </button>
+        <div class="dropdown-content">
+            <a href="#">BLT</a>
+            <a href="#">Club Sandwich</a>
+            <a href="#">Grilled Cheese</a>
+            <a href="#">Chicken Sandwich</a>
+            <a href="#">Tuna Melt</a>
+            <a href="#">Ham & Cheese</a>
+            <a href="#">Turkey Sandwich</a>
+            <a href="#">Egg Salad Sandwich</a>
+        </div>
+    </div>
+</body>
+
+</html>
