@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>User Profile Card</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background: #f0f2f5;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+    }
+
+    .card {
+        background: #fff;
+        border-radius: 15px;
+        box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+        width: 300px;
+        text-align: center;
+        overflow: hidden;
+        transition: transform 0.3s;
+    }
+
+    .card:hover {
+        transform: translateY(-5px);
+    }
+
+    /* TITLE ABOVE IMAGE */
+    .card-title {
+        font-size: 22px;
+        color: #333;
+        margin: 20px 0 10px 0;
+        font-weight: bold;
+    }
+
+    .card img.profile-pic {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+
+    .username {
+        margin: 15px 0 5px 0;
+        font-size: 18px;
+        color: #555;
+    }
+
+    .description {
+        font-size: 14px;
+        color: #777;
+        margin-bottom: 15px;
+    }
+
+    .socials {
+        margin-bottom: 15px;
+    }
+
+    .socials a {
+        text-decoration: none;
+        color: #555;
+        margin: 0 8px;
+        font-size: 18px;
+        transition: color 0.3s;
+    }
+
+    .socials a:hover {
+        color: #007BFF;
+    }
+
+    .contact-btn {
+        display: inline-block;
+        margin-bottom: 20px;
+        padding: 10px 25px;
+        background-color: #007BFF;
+        color: #fff;
+        border: none;
+        border-radius: 25px;
+        cursor: pointer;
+        font-size: 16px;
+        transition: background 0.3s;
+        text-decoration: none;
+    }
+
+    .contact-btn:hover {
+        background-color: #0056b3;
+    }
+</style>
+</head>
+<body>
+
+<div class="card">
+    <!-- TITLE ABOVE IMAGE -->
+    <div class="card-title">User Profile Card</div>
+
+    <!-- Profile Picture -->
+    <img src="pict.png" alt="Garfield" class="profile-pic">
+
+    <!-- Username -->
+    <div class="username">garfield</div>
+
+    <!-- Description -->
+    <div class="description">
+        <p>Level 1, The Cat</p>
+        <p>42 Cats</p>
+    </div>
+
+    <!-- Social Media -->
+    <div class="socials">
+        <a href="#"><i class="fa fa-dribbble"></i></a>
+        <a href="#"><i class="fa fa-twitter"></i></a>
+        <a href="#"><i class="fa fa-linkedin"></i></a>
+        <a href="#"><i class="fa fa-facebook"></i></a>
+    </div>
+
+    <!-- Contact Button -->
+    <a href="https://42berlin.de" class="contact-btn">Contact</a>
+</div>
+
+</body>
+</html>

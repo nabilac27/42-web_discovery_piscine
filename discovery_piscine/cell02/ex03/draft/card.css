@@ -1,0 +1,92 @@
+body {
+    font-family: courier;
+    background: #f0f2f5;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* Title */
+.title {
+    font-size: 27px;
+    color: #333;
+    margin-bottom: 30px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+/* Card */
+.card {
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.20);
+    width: 300px;
+    text-align: center;
+    transition: transform 0.4s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+/* Profile Picture */
+.profile-container {
+    padding: 20px 20px 0 20px;
+}
+
+.profile-pic {
+    width: 100%;
+    border-radius: 10px;
+}
+
+/* Username */
+.username {
+    margin: 15px 0 5px 0;
+    font-size: 18px;
+    color: #555;
+    font-weight: bold;
+}
+
+/* Description */
+.description {
+    font-size: 14px;
+    color: #777;
+}
+
+/* Social Media */
+.socials {
+    margin-bottom: 15px;
+}
+
+.socials a {
+    color: #555;
+    margin: 0 8px;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+
+.socials a:hover {
+    color: #007BFF;
+}
+
+/* Contact Button */
+.contact-btn {
+    display: inline-block;
+    margin-bottom: 20px;
+    padding: 10px 40px; 
+    width: 60%; 
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 16px;
+    text-decoration: none;
+}
+
+.contact-btn:hover {
+    background-color: #0056b3;
+}
