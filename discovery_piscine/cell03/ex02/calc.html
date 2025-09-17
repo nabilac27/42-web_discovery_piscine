@@ -3,58 +3,190 @@
 
 <head>
     <title>It's over 9000</title>
-    <link rel="stylesheet" href="calc.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        body {
+            font-family: courier;
+            background: #f0f2f5;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        /* ------ Title ------ */
+        .title {
+            font-size: 50px;
+            color: #333;
+            margin-bottom: 30px;
+            font-weight: bold;
+            text-shadow: 2px 2px #cfc8c8;
+            text-align: center;
+        }
+
+        /* ------ Box ------ */
+        table {
+            width: 350px;
+            background: #fff;
+            border-radius: 20px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.20);
+
+            text-align: center;
+            font-size: 20px;
+            color: #555;
+            font-weight: bold;
+        }
+
+        /* ------ Number Input ------ */
+        .number {
+            padding: 40px;
+        }
+
+        .input-number {
+            width: 250px;
+            height: 25px;
+            text-align: center;
+        }
+
+        /* ------ Operator ------ */
+        .select-operator {
+            width: 260px;
+            height: 25px;
+            text-align: center;
+        }
+
+        /* ------ Try Me ------ */
+        .tryme {
+            padding: 40px;
+        }
+
+
+        button {
+            background-color: #007BFF;
+            color: #fff;
+            font-size: 15px;
+
+            border: none;
+            border-radius: 20px;
+
+            text-decoration: none;
+            width: 250px;
+            height: 40px;
+            margin-bottom: 10px;
+
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #065ebd;
+            transform: translateY(-1px);
+        }
+
+
+        /* ------ Visible Table ------ */
+        /* table td {
+            border: 1px solid black;
+        } */
+    </style>
 </head>
 
 <body>
-    <!-- Title -->
-    <div class="title">USER PROFILE CARD</div>
+    <div>
+        <!-- Title -->
+        <div class="title">CALCULATOR</div>
 
-    <table class="card">
-        <!-- Profile Picture -->
-        <tr>
-            <td class="profile-container">
-                <img src="img/pict2.png" alt="Picture" class="profile-pic">
-            </td>
-        </tr>
+        <table>
+            <!-- Text Input: Left Number -->
+            <tr>
+                <td class="number">
+                    <input class="input-number" id="left-num" type="number" placeholder="Left Number">
+                </td>
+            </tr>
 
-        <!-- Username -->
-        <tr>
-            <td class="username">nchairun</td>
-        </tr>
+            <!-- Select Field: Operator -->
+            <tr>
+                <td>
+                    <select class="select-operator" id="operator">
+                        <option value="+">+</option>
+                        <option value="-">-</option>
+                        <option value="*">*</option>
+                        <option value="/">/</option>
+                        <option value="%">%</option>
+                    </select>
+                </td>
+            </tr>
 
-        <!-- Description -->
-        <tr>
-            <td class="description">
-                <p>Level 4, Core Curriculum</p>
-                <p>42 Heilbronn</p>
-            </td>
-        </tr>
+            <!-- Text Input: Right Number -->
+            <tr>
+                <td class="number">
+                    <input class="input-number" id="right-num" type="number" placeholder="Right Number">
+                </td>
+            </tr>
 
-        <!-- Social Media -->
-        <tr>
-            <td class="socials">
-                <a href="https://github.com/nabilac27"><i class="fa fa-github"></i></a>
-                <a href="https://www.linkedin.com/in/nabila-c-9b2a0a1b5/"><i class="fa fa-linkedin"></i></a>
-                <a href="https://www.42heilbronn.de/en/"><i class="fa fa-twitter"></i></a>
-                <a href="https://www.42heilbronn.de/en/"><i class="fa fa-facebook"></i></a>
-            </td>
-        </tr>
 
-        <!-- Contact Button -->
-        <tr>
-            <td class="contact-btn-container">
-                <a href="mailto:nabilac@outlook.de" class="contact-btn">Contact</a>
-            </td>
-        </tr>
+            <!-- Submit Button: Try Me -->
+            <tr>
+                <td class="tryme">
+                    <button type="submit" id="button">Try me!</button>
+                </td>
+            </tr>
+
+    </div>
+    <script>
+        {
+            // Parse
+            get_left_num = document.getElementById("left-num");
+            get_right_num = document.getElementById("right-num");
+            get_operator = document.getElementById("operator");
+            get_button = document.getElementById("button");
+
+            function calculation() {
+                left_num = Number(get_left_num.value);
+                right_num = Number(get_right_num.value);
+                operator = get_operator.value;
+
+                // Check Positive Number
+                if (!Number.isInteger(left_num) || !Number.isInteger(right_num) || left_num < 0 || right_num < 0) {
+                    alert("Error :(");
+                    return;
+                }
+
+                // Check division/modulo by zero
+                if ((operator === "/" || operator === "%") && right_num === 0) {
+                    alert("It's over 9000!");
+                    console.log("It's over 9000!");
+                    return;
+                }
+
+                // Calculation
+                let result = 0;
+                if (operator === "+")
+                    result = left_num + right_num;
+                else if (operator === "-")
+                    result = left_num - right_num;
+                else if (operator === "*")
+                    result = left_num * right_num;
+                else if (operator === "/")
+                    result = left_num / right_num;
+                else if (operator === "%")
+                    result = left_num % right_num;
+                else {
+                    alert("Error :(");
+                    return;
+                }
+
+                // Result
+                alert(`Result: ${result}`);
+                console.log(`Result: ${result}`);
+            }
+            button.addEventListener("click", calculation);
+
+            setInterval(() => {
+                alert("Please, use me...");
+            }, 30000);
+        }
+    </script>
     </table>
 </body>
 
 </html>
-
-
-<!-- 
-    Font Awesome |  https://fontawesome.com/v4/get-started/
-        <link> tag loads Font Awesome icons via a CDN
--->
