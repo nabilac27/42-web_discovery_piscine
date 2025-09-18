@@ -39,7 +39,7 @@ body {
 
 .profile-pic {
     width: 100%;
-    border-radius: 10px;
+    border-radius: 15px;
 }
 
 /* Username */
@@ -79,6 +79,7 @@ body {
 
 .contact-btn {
     display: inline-block;
+    width: 180px;
     padding: 10px 40px; 
     background-color: #007BFF;
     color: #fff;

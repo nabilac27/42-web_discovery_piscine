@@ -6,7 +6,7 @@
     <style>
         body {
             font-family: courier;
-            background: #f0f2f5;
+            background: linear-gradient(180deg, #000000d1 0%, #121212 100%);
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -16,25 +16,28 @@
 
         /* ------ Title ------ */
         .title {
-            font-size: 50px;
-            color: #333;
+            font-size: 45px;
+            color: black;
             margin-bottom: 30px;
             font-weight: bold;
             text-shadow: 2px 2px #cfc8c8;
             text-align: center;
         }
 
+        hr {
+            height: 2px;
+            background-color: black;
+        }
+
         /* ------ Box ------ */
         table {
-            width: 350px;
             background: #fff;
-            border-radius: 20px;
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.20);
-
             text-align: center;
             font-size: 20px;
             color: #555;
             font-weight: bold;
+            border-radius: 15px;
+            padding: 15px;
         }
 
         /* ------ Number Input ------ */
@@ -61,7 +64,7 @@
         }
 
 
-        button {
+        #button {
             background-color: #007BFF;
             color: #fff;
             font-size: 15px;
@@ -72,16 +75,14 @@
             text-decoration: none;
             width: 250px;
             height: 40px;
-            margin-bottom: 10px;
 
             cursor: pointer;
         }
 
-        button:hover {
+        #button:hover {
             background-color: #065ebd;
             transform: translateY(-1px);
         }
-
 
         /* ------ Visible Table ------ */
         /* table td {
@@ -91,70 +92,74 @@
 </head>
 
 <body>
-    <div>
+    <table>
         <!-- Title -->
-        <div class="title">CALCULATOR</div>
+        <tr>
+            <td class="title">CALCULATOR
+                <hr />
+            </td>
+        </tr>
+        <!-- Text Input: Left Number -->
+        <tr>
+            <td class="number">
+                <input class="input-number" id="left-num" type="text" placeholder="Left Number">
+            </td>
+        </tr>
 
-        <table>
-            <!-- Text Input: Left Number -->
-            <tr>
-                <td class="number">
-                    <input class="input-number" id="left-num" type="number" placeholder="Left Number">
-                </td>
-            </tr>
+        <!-- Select Field: Operator -->
+        <tr>
+            <td>
+                <select class="select-operator" id="operator">
+                    <option value="+">+</option>
+                    <option value="-">-</option>
+                    <option value="*">*</option>
+                    <option value="/">/</option>
+                    <option value="%">%</option>
+                </select>
+            </td>
+        </tr>
 
-            <!-- Select Field: Operator -->
-            <tr>
-                <td>
-                    <select class="select-operator" id="operator">
-                        <option value="+">+</option>
-                        <option value="-">-</option>
-                        <option value="*">*</option>
-                        <option value="/">/</option>
-                        <option value="%">%</option>
-                    </select>
-                </td>
-            </tr>
-
-            <!-- Text Input: Right Number -->
-            <tr>
-                <td class="number">
-                    <input class="input-number" id="right-num" type="number" placeholder="Right Number">
-                </td>
-            </tr>
+        <!-- Text Input: Right Number -->
+        <tr>
+            <td class="number">
+                <input class="input-number" id="right-num" type="text" placeholder="Right Number">
+            </td>
+        </tr>
 
 
-            <!-- Submit Button: Try Me -->
-            <tr>
-                <td class="tryme">
-                    <button type="submit" id="button">Try me!</button>
-                </td>
-            </tr>
-
-    </div>
+        <!-- Submit Button: Try Me -->
+        <tr>
+            <td class="tryme">
+                <input type="submit" id="button" value="Try Me!"></input>
+            </td>
+        </tr>
+    </table>
     <script>
         {
-            // Parse
+            // Parsing
             get_left_num = document.getElementById("left-num");
             get_right_num = document.getElementById("right-num");
             get_operator = document.getElementById("operator");
             get_button = document.getElementById("button");
 
             function calculation() {
-                left_num = Number(get_left_num.value);
-                right_num = Number(get_right_num.value);
-                operator = get_operator.value;
+                not_num_after = /^\d+$/;
+                left_str = get_left_num.value.trim();
+                right_str = get_right_num.value.trim();
 
-                // Check Positive Number
-                if (!Number.isInteger(left_num) || !Number.isInteger(right_num) || left_num < 0 || right_num < 0) {
-                    alert("Error :(");
+                // Check Non-Digits After Number
+                if (!not_num_after.test(left_str) || !not_num_after.test(right_str)) {
+                    alert("Error :( Only positive integers allowed!");
                     return;
                 }
 
-                // Check division/modulo by zero
-                if ((operator === "/" || operator === "%") && right_num === 0) {
-                    alert("It's over 9000!");
-                    console.log("It's over 9000!");
+                left_num = Number(get_left_num.value.trim());
+                right_num = Number(get_right_num.value.trim());
+                operator = get_operator.value;
+
+                // Check Positive Number
+                if (isNaN(left_num) || isNaN(right_num) || !Number.isInteger(left_num) || !Number.isInteger(right_num) || left_num < 0 || right_num < 0) {
+                    alert("Error :(");
                     return;
                 }
 
@@ -175,17 +180,26 @@
                     return;
                 }
 
+                // Check division/modulo by zero
+                if ((operator === "/" || operator === "%") && right_num === 0) {
+                    alert("It's over 9000!");
+                    console.log(`Result: ${result}`);
+                    return;
+                }
+
+
                 // Result
                 console.log(`Result: ${result}`);
             }
-            button.addEventListener("click", calculation);
+            get_button.addEventListener("click", calculation);
 
-            setInterval(() => {
+            function reminder() {
                 alert("Please, use me...");
-            }, 30000);
+            }
+
+            setInterval(reminder, 30000);
         }
     </script>
-    </table>
 </body>
 
 </html>
