@@ -1,4 +1,4 @@
-/* ******************** HANDLE COOKIE ******************** */
+/* ********** HANDLE COOKIE ********** */
 function setCookie(cname, cvalue, exdays) 
 {
   const date = new Date();
@@ -11,31 +11,31 @@ function setCookie(cname, cvalue, exdays)
 function getCookie(cname) 
 {
   let name = cname + "=";
-  let cookie_array = document.cookie.split(';');
+  let ca = document.cookie.split(';');
   let i = 0;
 
-  while (i < cookie_array.length) 
+  while (i < ca.length) 
   {
-    let cookie = cookie_array[i];
-    while (cookie.charAt(0) == ' ') 
+    let c = ca[i];
+    while (c.charAt(0) == ' ') 
     {
-      cookie = cookie.substring(1);
+      c = c.substring(1);
     }
-    if (cookie.indexOf(name) == 0) 
+    if (c.indexOf(name) == 0) 
     {
-      // console.log("Message- Get Cookies: ", cookie.substring(name.length, cookie.length));
-      return (cookie.substring(name.length, cookie.length));
+      // console.log("Message- Get Cookies: ", c.substring(name.length, c.length));
+      return c.substring(name.length, c.length);
     }
     i++;
   }
-  return "";
+    return "";
 }
 
-/* ********************   UI REFERENCES   ******************** */
+/* ********** UI REFERENCES ********** */
 const get_ft_list = document.getElementById('ft_list');
 const get_button_new = document.getElementById('button-new');
 
-/* ********************     SAVE TODOS     ******************** */
+/* ********** SAVE TODOS ********** */
 function save_todos() 
 {
   const todos = [];
@@ -49,11 +49,8 @@ function save_todos()
   // console.log("Saved todos:", todos);
 }
 
-/* ******************** CREATE TO-DO ITEMS ******************** */
+/* ********** CREATE TO-DO ITEMS ********** */
 function createTodo(text) {
-  text = text.trim();
-  if (text === "") 
-    return;
   const get_div = document.createElement('div');
   get_div.textContent = text;
   get_div.className = 'todo-item';
@@ -69,20 +66,20 @@ function createTodo(text) {
   });
 
   get_ft_list.prepend(get_div);
-  // console.log(`Added TO DO: "${text}"`);
+  console.log(`Added TO DO: "${text}"`);
 }
 
-/* ********************   ADD NEW TO-DO   ******************** */
+/* ********** ADD NEW TO-DO ********** */
 get_button_new.addEventListener('click', function () 
 {
   var text = prompt("Enter a new TO DO:");
-  if (text !== "" && text.trim() !== "") {
+  if (text !== "") {
     createTodo(text);
     save_todos();
   }
 });
 
-/* ******************** LOAD SAVED TO-DO ******************** */
+/* ********** LOAD SAVED TO-DO ********** */
 window.addEventListener('load', function () 
 {
   var savedTodos = getCookie('todos');
@@ -90,9 +87,7 @@ window.addEventListener('load', function ()
     var todos = JSON.parse(savedTodos);
     var i = 0;
     while (i < todos.length) {
-      if (todos[i].trim() != "") {
-        createTodo(todos[i].trim());
-      }
+      createTodo(todos[i]);
       i++;
     }
     // console.log("Saved Todos:", todos);

@@ -84,3 +84,156 @@
     setInterval(() => {
         alert("Please, use me...");
     }, 30000);
+
+---
+
+.addEventListener
+Syntax      element.addEventListener(event, function, useCapture)
+
+---
+
+COOKIES | https://www.w3schools.com/js/js_cookies.asp
+    * A cookie is a small piece of data that a website stores on your browser. 
+    * helps websites “remember” things about you when you visit them again.
+    * Cookies = “website memory” stored in your browser”.
+
+    * Stores information
+        * username or login session
+        * Items in a shopping cart
+        * User preferences (like theme color)
+        * Cookies are stored locally, so the website can read them next time you visit.
+        * Can have an expiration
+        * Some cookies disappear when you close the browser (session cookies).
+        * Others last days, months, or years (persistent cookies).
+        * Used by websites for convenience
+        * Keep you logged in
+        * Remember your settings
+        * Track your activity (for analytics or ads)
+
+    * Example: Todo App
+        * When you add a task to your todo app, the website can store it in a cookie.
+        * if you refresh the page or close the browser, your tasks are still there when you come back.
+
+
+    * document.cookie
+        * JavaScript can create, read, and delete cookies with the document.cookie property.
+    
+        * Syntax    document.cookie = "username=John Doe";
+        --
+        * You can also add an expiry date (in UTC time). 
+        * By default, the cookie is deleted when the browser is closed:
+
+        * Syntax    document.cookie = "username=John Doe; expires=Thu, 18 Dec 2013 12:00:00 UTC";
+        --
+        *With a path parameter, you can tell the browser what path the cookie belongs to. 
+        * By default, the cookie belongs to the current page.
+
+        * Syntax    document.cookie = "username = John Doe; expires=Thu, 18 Dec 2013 12:00:00 UTC; path=/";
+
+---
+
+* JSON.stringify(todos) 
+    * is a method that converts a JavaScript object or array
+    * (in this case, the todos variable) into a JSON string.
+
+    * Convert the list of todo items (probably stored as an array of objects) into a string format
+    * Store this string representation in browser storage (like cookies or localStorage)
+
+    * const todos = [
+        { id: 1, text: "Buy groceries" },
+        { id: 2, text: "Finish homework" }
+    ];
+
+    After applying JSON.stringify(todos), it becomes:
+    "[{\"id\":1,\"text\":\"Buy groceries\"},{\"id\":2,\"text\":\"Finish homework\"}]"
+
+---
+
+* .children gives all the HTML elements inside that container (each individual todo item)
+* .length tell how many todo items there are
+ .children[i] accesses a specific todo item element (the first, second, etc.)
+ .textContent gets just the text inside that element (like "working" or "studying")
+ todos.push() adds that text to your array
+
+---
+
+ document.createElement
+
+ Example:
+    // Create a new <li> element
+    const newItem = document.createElement('li');
+
+    // Add some text to it
+    newItem.textContent = "Learn JavaScript";
+
+    // Optionally add a class
+    newItem.classList.add("todo-item");
+
+    // Append it to an existing list
+    const todoList = document.getElementById("todo-list");
+    todoList.appendChild(newItem);
+
+---
+
+* savedTodos 
+    * contains a JSON string retrieved from cookie 
+    * (something like "[\"working\",\"studying\",\"sleeping\"]")
+
+    * JSON.parse() 
+    * converts this string back into a JavaScript array that your code can work with
+    * The result is stored in the todos variable, which becomes: ["working", "studying", "sleeping"]
+
+
+    * When saving: JavaScript Array → JSON String (with stringify)
+    * When loading: JSON String → JavaScript Array (with parse)
+
+
+---
+
+try...catch?
+    * way to handle errors in JavaScript so your code doesn’t break if something goes wrong.
+
+    * try { ... } → contains the code that might throw an error.
+    * catch (e) { ... } → runs if an error happens inside try. e contains information about the error.
+
+    Example:
+    try 
+    {
+        var data = JSON.parse("invalid JSON"); // This will fail
+    } 
+    catch (e) 
+    {
+        console.log("There was an error:", e);
+    }
+
+---
+
+JSON (JavaScript Object Notation) 
+    lightweight data interchange format that's easy for humans to read and write 
+    and easy for machines to parse and generate.
+
+    * A text-based format that is language independent
+    * Derived from JavaScript object syntax, but distinct from it
+    * Uses simple conventions that programmers are already familiar with
+
+    Structure
+        {
+            "name": "John",
+            "age": 30,
+            "city": "New York"
+        }
+    Usage
+        API Communication: Most web APIs send and receive data in JSON format
+        Data Storage: Often used for configuration files and data persistence (like your todo list)
+        Data Exchange: Transfers data between server and web applications
+
+        JSON.stringify(): Converts JavaScript objects to JSON strings
+        JSON.parse(): Converts JSON strings back to JavaScript objects
+
+---
+
+DOM manipulation
+    is the process of interacting with the DOM API 
+    or change or modify an HTML document that will be displayed in a web browser. 
+    By manipulating the DOM, we can create web applications that update the data 
+    in a web page without refreshing the page.
