@@ -1,0 +1,201 @@
+/* ---------------- RESET ------------------------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background: #0a192f;
+  color: #ccd6f6;
+  scroll-behavior: smooth;
+}
+
+/* ---------------- HEADER ------------------------ */
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: #0a192f;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  z-index: 100;
+  border-bottom: 1px solid #112240;
+}
+
+header .logo {
+  font-weight: bold;
+  font-size: 20px;
+  color: #64ffda;
+  flex-shrink: 0;
+}
+
+/* -------------- NAVIGATION ----------------------- */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+.nav-links li a {
+  color: #ccd6f6;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.nav-links li a:hover {
+  color: #64ffda;
+}
+
+/* -------------- HAMBURGER BUTTON ----------------- */
+.menu-toggle {
+  display: none;
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+}
+
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background: white;
+  display: block;
+  transition: all 0.3s;
+}
+
+/* ---------------- SECTIONS ------------------------- */
+section {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 120px 20px 40px;
+}
+
+section h1 {
+  font-size: 3em;
+  color: #64ffda;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+section h2 {
+  font-size: 2em;
+  color: #8892b0;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+section p {
+  max-width: 700px;
+  text-align: center;
+  line-height: 1.6;
+}
+
+/* ----------------------- ABOUT ----------------------- */
+#about {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+#about img {
+  border-radius: 50%;
+  width: 180px;
+  height: 180px;
+}
+
+/* ------------------- EXPERIENCE ----------------------- */
+#experience {
+  background: #112240;
+  color: #ccd6f6;
+}
+
+.experience-container {
+  display: flex;
+  gap: 60px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.experience,
+.skills {
+  flex: 1;
+  min-width: 250px;
+}
+
+.experience h3,
+.skills h3 {
+  color: #64ffda;
+  margin-bottom: 10px;
+}
+
+.experience ul,
+.skills ul {
+  list-style: none;
+  padding-left: 0;
+  line-height: 1.8;
+}
+
+#experience h1 {
+  margin-top: -20px;
+}
+
+/* CONTACT */
+#contact {
+  text-align: center;
+}
+
+#contact a {
+  color: #64ffda;
+  text-decoration: none;
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #0a192f;
+  color: #8892b0;
+  font-size: 14px;
+}
+
+/* ---------------- RESPONSIVE ---------------- */
+@media(max-width:768px) {
+  .nav-links {
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background: #0a192f;
+    flex-direction: column;
+    width: 200px;
+    display: none;
+    border-radius: 5px;
+    padding: 10px 0;
+  }
+
+  #about {
+    flex-direction: column;
+  } */
+
+  .menu-toggle:checked+.hamburger+.nav-links {
+    display: flex;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+}
