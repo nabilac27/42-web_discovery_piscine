@@ -237,3 +237,38 @@ DOM manipulation
     or change or modify an HTML document that will be displayed in a web browser. 
     By manipulating the DOM, we can create web applications that update the data 
     in a web page without refreshing the page.
+
+
+---
+
+jQuery
+    * JavaScript library
+    * to make working with JavaScript easier, faster, and more consistent across browsers.
+
+    * Simplifies DOM manipulation: 
+        * Instead of writing long document.getElementById() or document.querySelector(), 
+        * you can use a short and easy syntax like $('#myElement').
+
+    * Cross-browser compatibility: 
+        * It hides browser quirks (like old Internet Explorer issues) so your code works everywhere.
+
+    * Event handling: 
+        * Makes adding and removing event listeners shorter and easier.
+
+    * Animations: 
+        * Includes built-in effects like .fadeIn(), .slideUp(), etc.
+
+    * AJAX requests: 
+        * Makes it easier to load data from a server without reloading the page
+
+
+---
+
+Event
+    *  something that happens in the browser —  
+    * an action or occurrence that your code can "listen for" and respond to
+
+    * Example: click, dblclick, keyup, change, submit, load
+
+---
+

@@ -1,181 +1,214 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
+
+<head>
     <title>It's over 9000</title>
     <style>
-      body {
-        font-family: courier;
-        background: #f0f2f5;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
-      }
-
-      .title {
-        font-size: 50px;
-        color: #333;
-        margin-bottom: 30px;
-        font-weight: bold;
-        text-shadow: 2px 2px #cfc8c8;
-        text-align: center;
-      }
-
-      table {
-        width: 350px;
-        background: #fff;
-        border-radius: 20px;
-        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-        text-align: center;
-        font-size: 20px;
-        color: #555;
-        font-weight: bold;
-      }
-
-      .number {
-        padding: 40px;
-      }
-
-      .input-number {
-        width: 250px;
-        height: 25px;
-        text-align: center;
-      }
-
-      .select-operator {
-        width: 260px;
-        height: 25px;
-        text-align: center;
-      }
-
-      .tryme {
-        padding: 40px;
-      }
-
-      button {
-        background-color: #007bff;
-        color: #fff;
-        font-size: 15px;
-        border: none;
-        border-radius: 20px;
-        width: 250px;
-        height: 40px;
-        margin-bottom: 10px;
-        cursor: pointer;
-      }
-
-      button:hover {
-        background-color: #065ebd;
-        transform: translateY(-1px);
-      }
-    </style>
-    <!-- Include jQuery -->
-    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
-  </head>
-
-  <body>
-    <div>
-      <div class="title">CALCULATOR</div>
-
-      <table>
-        <tr>
-          <td class="number">
-            <input
-              class="input-number"
-              id="left-num"
-              type="number"
-              placeholder="Left Number"
-            />
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <select class="select-operator" id="operator">
-              <option value="+">+</option>
-              <option value="-">-</option>
-              <option value="*">*</option>
-              <option value="/">/</option>
-              <option value="%">%</option>
-            </select>
-          </td>
-        </tr>
-        <tr>
-          <td class="number">
-            <input
-              class="input-number"
-              id="right-num"
-              type="number"
-              placeholder="Right Number"
-            />
-          </td>
-        </tr>
-        <tr>
-          <td class="tryme">
-            <button type="button" id="button">Try me!</button>
-          </td>
-        </tr>
-      </table>
-    </div>
-
-    <script>
-      $(document).ready(function () {
-        function calculation() {
-          let left_num = Number($("#left-num").val());
-          let right_num = Number($("#right-num").val());
-          let operator = $("#operator").val();
-
-          // Check Positive Integer
-          if (
-            !Number.isInteger(left_num) ||
-            !Number.isInteger(right_num) ||
-            left_num < 0 ||
-            right_num < 0
-          ) {
-            alert("Error :(");
-            return;
-          }
-
-          // Division/modulo by zero
-          if ((operator === "/" || operator === "%") && right_num === 0) {
-            alert("It's over 9000!");
-            console.log("It's over 9000!");
-            return;
-          }
-
-          // Calculation
-          let result;
-          switch (operator) {
-            case "+":
-              result = left_num + right_num;
-              break;
-            case "-":
-              result = left_num - right_num;
-              break;
-            case "*":
-              result = left_num * right_num;
-              break;
-            case "/":
-              result = left_num / right_num;
-              break;
-            case "%":
-              result = left_num % right_num;
-              break;
-            default:
-              alert("Error :(");
-              return;
-          }
-
-          console.log(`Result: ${result}`);
+        body {
+            font-family: courier;
+            background: linear-gradient(180deg, #000000d1 0%, #121212 100%);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
         }
 
-        $("#button").click(calculation);
+        /* ------ Title ------ */
+        .title {
+            font-size: 45px;
+            color: black;
+            margin-bottom: 30px;
+            font-weight: bold;
+            text-shadow: 2px 2px #cfc8c8;
+            text-align: center;
+        }
 
-        setInterval(() => {
-          alert("Please, use me...");
-        }, 30000);
-      });
+        hr {
+            height: 2px;
+            background-color: black;
+        }
+
+        /* ------ Box ------ */
+        table {
+            background: #fff;
+            text-align: center;
+            font-size: 20px;
+            color: #555;
+            font-weight: bold;
+            border-radius: 15px;
+            padding: 15px;
+        }
+
+        /* ------ Number Input ------ */
+        .number {
+            padding: 40px;
+        }
+
+        .input-number {
+            width: 250px;
+            height: 25px;
+            text-align: center;
+        }
+
+        /* ------ Operator ------ */
+        .select-operator {
+            width: 260px;
+            height: 25px;
+            text-align: center;
+        }
+
+        /* ------ Try Me ------ */
+        .tryme {
+            padding: 40px;
+        }
+
+
+        #button {
+            background-color: #007BFF;
+            color: #fff;
+            font-size: 15px;
+
+            border: none;
+            border-radius: 20px;
+
+            text-decoration: none;
+            width: 250px;
+            height: 40px;
+
+            cursor: pointer;
+        }
+
+        #button:hover {
+            background-color: #065ebd;
+            transform: translateY(-1px);
+        }
+
+        /* ------ Visible Table ------ */
+        /* table td {
+            border: 1px solid black;
+        } */
+    </style>
+</head>
+
+<body>
+    <table>
+        <!-- Title -->
+        <tr>
+            <td class="title">CALCULATOR
+                <hr />
+            </td>
+        </tr>
+        <!-- Text Input: Left Number -->
+        <tr>
+            <td class="number">
+                <input class="input-number" id="left-num" type="text" placeholder="Left Number">
+            </td>
+        </tr>
+
+        <!-- Select Field: Operator -->
+        <tr>
+            <td>
+                <select class="select-operator" id="operator">
+                    <option value="+">+</option>
+                    <option value="-">-</option>
+                    <option value="*">*</option>
+                    <option value="/">/</option>
+                    <option value="%">%</option>
+                </select>
+            </td>
+        </tr>
+
+        <!-- Text Input: Right Number -->
+        <tr>
+            <td class="number">
+                <input class="input-number" id="right-num" type="text" placeholder="Right Number">
+            </td>
+        </tr>
+
+
+        <!-- Submit Button: Try Me -->
+        <tr>
+            <td class="tryme">
+                <input type="submit" id="button" value="Try Me!"></input>
+            </td>
+        </tr>
+    </table>
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+    <script>
+        // Parsing
+        const $leftNum = $("#left-num");        //  document.getElementById("left-num");
+        const $rightNum = $("#right-num");      //  document.getElementById("right-num");
+        const $operator = $("#operator");       //  document.getElementById("operator");
+        const $button = $("#button");           //  document.getElementById("button");
+
+        function calculation() {
+            const not_num_after = /^\d+$/;
+            const left_str = $leftNum.val().trim();      // .val() instead of .value
+            const right_str = $rightNum.val().trim();
+
+            // Check Non-Digits After Number
+            if (!not_num_after.test(left_str) || !not_num_after.test(right_str)) {
+                alert("Error :( Only positive integers allowed!");
+                return;
+            }
+
+            const left_num = Number(left_str);
+            const right_num = Number(right_str);
+            const operator = $operator.val();            // .val() instead of .value
+
+            // Check Positive Number
+            if (isNaN(left_num) || isNaN(right_num) || !Number.isInteger(left_num) || !Number.isInteger(right_num) || left_num < 0 || right_num < 0) {
+                alert("Error :(");
+                return;
+            }
+
+            // Calculation
+            let result = 0;
+            if (operator === "+")
+                result = left_num + right_num;
+            else if (operator === "-")
+                result = left_num - right_num;
+            else if (operator === "*")
+                result = left_num * right_num;
+            else if (operator === "/")
+                result = left_num / right_num;
+            else if (operator === "%")
+                result = left_num % right_num;
+            else {
+                alert("Error :(");
+                return;
+            }
+
+            // Check division/modulo by zero
+            if ((operator === "/" || operator === "%") && right_num === 0) {
+                alert("It's over 9000!");
+                console.log(`Result: ${result}`);
+                return;
+            }
+
+            // Result
+            console.log(`Result: ${result}`);
+        }
+
+
+        $button.on("click", calculation); // get_button.addEventListener("click", calculation);
+
+        function reminder() {
+            alert("Please, use me...");
+        }
+
+        setInterval(reminder, 30000);
     </script>
-  </body>
+</body>
+
 </html>
+
+
+<!-- 
+    Vanilla JS	                        jQuery	                Notes
+    ----------------------------------------------------------------------------------------
+    document.getElementById("id")	    $("#id")	        $() selects by ID with #
+    .value	                            .val()	            .val() gets or sets input values
+    .addEventListener("click", fn)	    .on("click", fn)	jQuery shorthand for event binding
+-->

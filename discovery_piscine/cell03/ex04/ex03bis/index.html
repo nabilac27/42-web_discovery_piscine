@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
   <title>TO DO or Not TO DO</title>
   <style>
     body {
@@ -14,6 +14,7 @@
     }
 
     #card {
+      /* width: 350px; */
       background: #fff;
       border-radius: 15px;
       box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
@@ -33,17 +34,25 @@
       text-shadow: 2px 2px #cfc8c8;
     }
 
+    #title:hover {
+      transform: translateX(3px);
+      color: rgba(0, 0, 0, 0.84);
+    }
+
     #button-new {
       font-size: 15px;
       background-color: #007bff;
       color: #fff;
       border: none;
       border-radius: 15px;
-      width: 250px;
       height: 50px;
       margin-top: 15px;
       cursor: pointer;
+      width: 100%;
+      max-width: 100%;
+      box-sizing: border-box;
     }
+
     #button-new:hover {
       background-color: #065ebd;
       transform: translateX(3px);
@@ -72,10 +81,8 @@
       transform: translateX(3px);
     }
   </style>
-
-  <!-- Include jQuery -->
-  <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
 </head>
+
 <body>
   <div id="card">
     <div id="title">TO DO LIST</div>
@@ -83,71 +90,8 @@
     <button id="button-new">New</button>
     <div id="ft_list"></div>
   </div>
-
-  <script>
-    $(document).ready(function() {
-      const $ft_list = $('#ft_list');
-
-      // --- Cookie Helpers ---
-      function set_cookie(name, value, days) {
-        const d = new Date();
-        d.setTime(d.getTime() + (days*24*60*60*1000));
-        document.cookie = `${name}=${encodeURIComponent(value)};expires=${d.toUTCString()};path=/`;
-      }
-
-      function get_cookie(name) {
-        const cname = name + "=";
-        const decoded = decodeURIComponent(document.cookie);
-        const ca = decoded.split(';');
-        for (let c of ca) {
-          c = c.trim();
-          if (c.indexOf(cname) === 0) return c.substring(cname.length);
-        }
-        return "";
-      }
-
-      // --- Save TODOs to cookie ---
-      function save_todos() {
-        const todos = [];
-        $ft_list.children().each(function() {
-          todos.push($(this).text());
-        });
-        set_cookie('todos', JSON.stringify(todos), 365);
-      }
-
-      // --- Create a TODO item ---
-      function create_todo(text) {
-        const $div = $('<div>').addClass('todo-item').text(text);
-        $div.click(function() {
-          if (confirm("Remove this TO DO?")) {
-            $div.remove();
-            save_todos();
-          }
-        });
-        $ft_list.prepend($div);
-      }
-
-      // --- Button Click ---
-      $('#button-new').click(function() {
-        const text = prompt("Create a new TO DO:");
-        if (text && text.trim() !== "") {
-          create_todo(text.trim());
-          save_todos();
-        }
-      });
-
-      // --- Load saved TODOs ---
-      const saved = get_cookie('todos');
-      if (saved) {
-        try {
-          const todos = JSON.parse(saved);
-          todos.forEach(todo => create_todo(todo));
-        } catch (e) {
-          console.error("Error parsing saved todos");
-        }
-      }
-    });
-  </script>
+  <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+  <script src="todo2.js"></script>
 </body>
-</html>
 
+</html>
