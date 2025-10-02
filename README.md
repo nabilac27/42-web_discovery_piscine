@@ -15,9 +15,9 @@ During this intensive 5-day program, I learned the basics of web development and
 
 ## Table of Contents
 
-| File             | Description                                                         | Technologies Used  | Submitted Date   |
-|------------------|---------------------------------------------------------------------|--------------------|-------------------|
+| File             | Description                                                         | Technologies Used  |
+|------------------|---------------------------------------------------------------------|--------------------|
 | **cell00**      | Implemented basic shell commands | Shell               | 10/02/2025|
-| **cell01**      | 	Created basic HTML structure, implemented tables, and made the page responsive               | HTML               | 11/02/2025|
+| **cell01**      | 	Created basic HTML structure, implemented tables, and made the page responsive               | HTML               |
 | **cell02**       | Styled the webpage with a dropdown menu, profile card, and parallax effect | CSS                | 12/02/2025|
-| **cell03**| Implemented JavaScript for dynamic effects like background color change, balloons, and a calculator | HTML, CSS, JavaScript | 13/02/2025|
+| **cell03**| Implemented JavaScript for dynamic effects like background color change, balloons, and a calculator | HTML, CSS, JavaScript |
