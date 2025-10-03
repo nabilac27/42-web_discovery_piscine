@@ -5,6 +5,7 @@ This repository contains my work from the **Web Development Discovery Piscine** 
 which I attended from **15th September to 19th September 2025**. 
 
 During this intensive 5-day program, I learned the basics of web development and gained hands-on experience with essential tools and technologies.
+---
 
 ## Key Skills:
 - **Web Page Structure**: Understanding the foundation of web development with HTML, including table creation and responsive web design.
@@ -12,6 +13,8 @@ During this intensive 5-day program, I learned the basics of web development and
 - **Dynamic Effects**: Adding interactive elements like parallax scrolling and background color changes using JavaScript.
 - **Event Handling**: Understanding how to work with DOM elements, events, and manipulate them with JavaScript.
 - **Problem-Solving**: Building functional components like calculators using JavaScript, handling user input, and performing calculations.
+
+---
 
 ## Table of Contents
 
@@ -21,3 +24,9 @@ During this intensive 5-day program, I learned the basics of web development and
 | **cell01**      | 	Created basic HTML structure, implemented tables, and made the page responsive               | HTML               |
 | **cell02**       | Styled the webpage with a dropdown menu, profile card, and parallax effect | CSS                |
 | **cell03**| Implemented JavaScript for dynamic effects like background color change, balloons, and a calculator | JavaScript |
+
+---
+
+## Preview
+
+![drop_down_button]([https://raw.githubusercontent.com/nabilac27/42-so_long/main/docs/so_long_screenshot.png](https://raw.githubusercontent.com/nabilac27/42-web_discovery_piscine/refs/heads/main/docs/preview/dropdown_button.png))
