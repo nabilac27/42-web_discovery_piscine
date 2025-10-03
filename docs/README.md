@@ -29,10 +29,10 @@ During this intensive 5-day program, I learned the basics of web development and
 
 ## Preview
 
+![to_do_list.png](https://raw.githubusercontent.com/nabilac27/42-web_discovery_piscine/refs/heads/main/docs/preview/to_do_list.png)
+
 ![profile_card.png](https://raw.githubusercontent.com/nabilac27/42-web_discovery_piscine/refs/heads/main/docs/preview/profile_card.png)
 
-![drop_down_button.png](https://raw.githubusercontent.com/nabilac27/42-web_discovery_piscine/refs/heads/main/docs/preview/dropdown_button.png)](https://raw.githubusercontent.com/nabilac27/42-so_long/main/docs/so_long_screenshot.png)
+[![drop_down_button.png](https://raw.githubusercontent.com/nabilac27/42-web_discovery_piscine/refs/heads/main/docs/preview/dropdown_button.png)](https://raw.githubusercontent.com/nabilac27/42-so_long/main/docs/so_long_screenshot.png)
 
-!parallax.png](https://raw.githubusercontent.com/nabilac27/42-web_discovery_piscine/refs/heads/main/docs/preview/parallax.png)
-
-
+![parallax.png](https://raw.githubusercontent.com/nabilac27/42-web_discovery_piscine/refs/heads/main/docs/preview/parallax.png)
