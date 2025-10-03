@@ -21,9 +21,8 @@ During this intensive 5-day program, I learned the basics of web development and
   
   Adding interactive elements like parallax scrolling and background color changes using JavaScript.
 
-- **Event Handling**:
-  
-  Understanding how to work with DOM elements, events, and manipulate them with JavaScript.
+- **Event & Cookies Handling**  
+  Working with DOM elements and events in JavaScript (such as `onclick` for user interactions), and using cookies to save persistent data (e.g., storing To-Do list items).
 
 ---
 
