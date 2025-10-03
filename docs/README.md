@@ -5,6 +5,7 @@ This repository contains my work from the **Web Development Discovery Piscine** 
 which I attended from **15th September to 19th September 2025**. 
 
 During this intensive 5-day program, I learned the basics of web development and gained hands-on experience with essential tools and technologies.
+
 ---
 
 ## Key Skills:
