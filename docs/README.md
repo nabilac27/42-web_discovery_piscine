@@ -29,4 +29,4 @@ During this intensive 5-day program, I learned the basics of web development and
 
 ## Preview
 
-![drop_down_button.png]([https://raw.githubusercontent.com/nabilac27/42-so_long/main/docs/so_long_screenshot.png](https://raw.githubusercontent.com/nabilac27/42-web_discovery_piscine/refs/heads/main/docs/preview/dropdown_button.png))
+![drop_down_button.png]((https://raw.githubusercontent.com/nabilac27/42-web_discovery_piscine/refs/heads/main/docs/preview/dropdown_button.png))
