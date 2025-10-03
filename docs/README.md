@@ -10,6 +10,7 @@ During this intensive 5-day program, I learned the basics of web development and
 
 ## Key Skills:
 - **Web Page Structure**:
+
   Understanding the foundation of web development with HTML, including table creation and responsive web design.
 - **Styling**:
   Using CSS for design and layout, including creating dropdown menus, profile cards, and implementing parallax scrolling.
