@@ -42,25 +42,25 @@ During this intensive 5-day program, I learned the basics of web development and
 ## 📝 To-Do List
 ![to_do_list.png](https://raw.githubusercontent.com/nabilac27/42-web_discovery_piscine/refs/heads/main/docs/preview/to_do_list.png)
 
-**To-do-list program using JavaScript with cookies handling.**
+**To-do-list program using HTML, CSS and JavaScript with cookies handling.**
 
 ---
 
 ## 👤 Profile Card
 ![profile_card.png](https://raw.githubusercontent.com/nabilac27/42-web_discovery_piscine/refs/heads/main/docs/preview/profile_card.png)
 
-**Profile card created with CSS, featuring a clickable contact button.**
+**Profile card styled with CSS, featuring a clickable contact button.**
 
 ---
 
 ## 📂 Drop Down Button
 [![drop_down_button.png](https://raw.githubusercontent.com/nabilac27/42-web_discovery_piscine/refs/heads/main/docs/preview/dropdown_button.png)](https://raw.githubusercontent.com/nabilac27/42-so_long/main/docs/so_long_screenshot.png)
 
-**Menu with dropdown style (menu content appears when cursor hovers over the menu) implemented in CSS.**
+**Menu with dropdown style (menu content appears when cursor hovers over the menu) implemented in HTML and CSS.**
 
 ---
 
 ## 🌄 Parallax
 ![parallax.png](https://raw.githubusercontent.com/nabilac27/42-web_discovery_piscine/refs/heads/main/docs/preview/parallax.png)
 
-**Parallax-style page using CSS, where two background layers remain static while the middle box moves during scrolling.**
+**Parallax-style page using HTML and CSS, where two background layers remain static while the middle box moves during scrolling.**
