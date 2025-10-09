@@ -53,14 +53,14 @@ During this intensive 5-day program, I learned the basics of web development and
 
 ---
 
-## 📂 Drop Down Button
-[![drop_down_button.png](https://raw.githubusercontent.com/nabilac27/42-web_discovery_piscine/refs/heads/main/docs/preview/dropdown_button.png)](https://raw.githubusercontent.com/nabilac27/42-so_long/main/docs/so_long_screenshot.png)
-
-**Menu with dropdown style (menu content appears when cursor hovers over the menu) implemented in HTML and CSS.**
-
----
-
 ## 🌄 [Parallax](https://nabilac27.github.io/42-web-parallax/)
 ![parallax.png](https://raw.githubusercontent.com/nabilac27/42-web_discovery_piscine/refs/heads/main/docs/preview/parallax.png)
 
 **Parallax-style page using HTML and CSS, where two background layers remain static while the middle box moves during scrolling.**
+
+---
+
+## 📂 Drop Down Button
+[![drop_down_button.png](https://raw.githubusercontent.com/nabilac27/42-web_discovery_piscine/refs/heads/main/docs/preview/dropdown_button.png)](https://raw.githubusercontent.com/nabilac27/42-so_long/main/docs/so_long_screenshot.png)
+
+**Menu with dropdown style (menu content appears when cursor hovers over the menu) implemented in HTML and CSS.**
