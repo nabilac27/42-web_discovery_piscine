@@ -46,7 +46,7 @@ During this intensive 5-day program, I learned the basics of web development and
 
 ---
 
-## 👤 Profile Card
+## 👤 [Profile Card](https://nabilac27.github.io/42-web-profile_card/)
 ![profile_card.png](https://raw.githubusercontent.com/nabilac27/42-web_discovery_piscine/refs/heads/main/docs/preview/profile_card.png)
 
 **Profile card styled with CSS, featuring a clickable contact button.**
