@@ -9,19 +9,19 @@ During this intensive 5-day program, I learned the basics of web development and
 ---
 
 ## Key Skills:
-- **Web Page Structure**:
+- **Web Page Structure**
 
   Understanding the foundation of web development with HTML, including table creation and responsive web design.
   
-- **Styling**:
+- **Styling**
 
   Using CSS for design and layout, including creating dropdown menus, profile cards, and implementing parallax scrolling.
 
-- **Dynamic Effects**:
+- **Dynamic Effects**
   
   Adding interactive elements like parallax scrolling and background color changes using JavaScript.
 
-- **Event & Cookies Handling**  
+- **Event & Cookies Handling**
   Working with DOM elements and events in JavaScript (such as `onclick` for user interactions), and using cookies to save persistent data (e.g., storing To-Do list items).
 
 ---
