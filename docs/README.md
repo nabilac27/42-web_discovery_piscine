@@ -44,7 +44,7 @@ During this intensive 5-day program, I learned the basics of web development and
 ![to_do_list.png](https://raw.githubusercontent.com/nabilac27/42-web_discovery_piscine/refs/heads/main/docs/preview/to_do_list.png)
 
 **To-do-list program using HTML, CSS and JavaScript with cookies handling.**
-
+[Click here to see the codes](https://nabilac27.github.io/42-web-to_do_list/](https://github.com/nabilac27/42-web_discovery_piscine/tree/main/discovery_piscine/cell03/ex03)
 ---
 
 ## 👤 [Profile Card](https://nabilac27.github.io/42-web-profile_card/)
