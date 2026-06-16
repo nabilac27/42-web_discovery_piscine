@@ -1,8 +1,6 @@
 # Web Development Discovery Piscine
 
-This repository contains my work from the **Web Development Discovery Piscine** at **42 Heilbronn**, 
-
-which I attended from **15th September to 19th September 2025**. 
+This repository contains my work from the **Web Development Discovery Piscine**.
 
 During this intensive 5-day program, I learned the basics of web development and gained hands-on experience with essential tools and technologies.
 
