@@ -1,0 +1,274 @@
+* Document Object Model (DOM) Events | https://www.w3schools.com/jsref/dom_obj_event.asp
+    allow JavaScript to add event listener 
+    or event handlers to HTML elements.
+
+    Example:
+        <button onclick="myFunction()">Click me</button>
+
+        <element event="some JavaScript">
+
+    * In HTML onclick is the event listener | https://www.w3schools.com/jsref/event_onclick.asp
+    * myFunction is the event handler       | https://www.w3schools.com/js/js_events.asp
+
+
+---
+
+* HTML DOM -- Style | https://www.w3schools.com/jsref/prop_style_backgroundcolor.asp
+    Example:
+        document.style.backgroundColor = "color"
+
+    * document → is a special object in JavaScript that represents 
+                the entire HTML page currently loaded in the browser.
+
+    * document.body → refers specifically to the <body> element of that page.
+
+    * .style.backgroundColor → changes the CSS style of that <body> element 
+
+    * `rgb(${red}, ${green}, ${blue})`
+        Backticks ( ) → allow us to use template literals, which are special strings in JavaScript.
+    * {variable} → string interpolation
+
+    * RGB values | https://www.w3schools.com/html/html_colors_rgb.asp
+
+* JavaScript HTML DOM Elements | https://www.w3schools.com/js/js_htmldom_elements.asp
+    * const element = document.getElementById("intro");
+
+* box-shadow: 0 0 25px 8px rgb(0, 0, 0, 0.6);
+             offset-x, offset-y, blur-radius, spread-radius (r,g,b,opacity)
+
+---
+
+* Display Possibilities
+    * Writing into an HTML element, using innerHTML or innerText.
+    * Writing into the HTML output using document.write().
+    * Writing into an alert box, using window.alert().
+    * Writing into the browser console, using console.log().
+
+* window.alert() function 
+    displays a message box with a specified message and an OK button. 
+    It halts the further execution of the code until the user presses the OK button.
+
+* console.log() function 
+    is used for printing some output to the console. 
+    It does not block the execution of further code and does not require user interaction.
+
+* window object, alert() method 
+    * window object is the global scope object | https://www.w3schools.com/jsref/obj_window.asp
+    * The alert() method displays an alert box with a message and an OK button.
+
+* console object, log() method
+    * console object provides access to the browser's debugging console | https://www.w3schools.com/jsref/obj_console.asp
+    * log()	Outputs a message to the console
+
+---
+
+* DOM Events | https://www.w3schools.com/jsref/dom_obj_event.asp
+* click = an element is clicked on
+
+* DOM Element addEventListener() | https://www.w3schools.com/jsref/met_element_addeventlistener.asp
+    * addEventListener = method attaches an event handler to an element.
+
+    * Syntax    element.addEventListener(event, function)
+
+--
+
+* setInterval | https://www.w3schools.com/jsref/met_win_setinterval.asp
+    * repeatedly runs a piece of code at a specified time interval (in milliseconds).
+
+    Syntax  setInterval(function, milliseconds)
+
+*   () => { ... } (Arrow Function)
+    This is an arrow function — a shorter way to write a function in JavaScript.
+    Whatever is inside { ... } will be executed each time the interval is triggered.
+
+    setInterval(() => {
+        alert("Please, use me...");
+    }, 30000);
+
+---
+
+.addEventListener
+Syntax      element.addEventListener(event, function, useCapture)
+
+---
+
+COOKIES | https://www.w3schools.com/js/js_cookies.asp
+    * A cookie is a small piece of data that a website stores on your browser. 
+    * helps websites “remember” things about you when you visit them again.
+    * Cookies = “website memory” stored in your browser”.
+
+    * Stores information
+        * username or login session
+        * Items in a shopping cart
+        * User preferences (like theme color)
+        * Cookies are stored locally, so the website can read them next time you visit.
+        * Can have an expiration
+        * Some cookies disappear when you close the browser (session cookies).
+        * Others last days, months, or years (persistent cookies).
+        * Used by websites for convenience
+        * Keep you logged in
+        * Remember your settings
+        * Track your activity (for analytics or ads)
+
+    * Example: Todo App
+        * When you add a task to your todo app, the website can store it in a cookie.
+        * if you refresh the page or close the browser, your tasks are still there when you come back.
+
+
+    * document.cookie
+        * JavaScript can create, read, and delete cookies with the document.cookie property.
+    
+        * Syntax    document.cookie = "username=John Doe";
+        --
+        * You can also add an expiry date (in UTC time). 
+        * By default, the cookie is deleted when the browser is closed:
+
+        * Syntax    document.cookie = "username=John Doe; expires=Thu, 18 Dec 2013 12:00:00 UTC";
+        --
+        *With a path parameter, you can tell the browser what path the cookie belongs to. 
+        * By default, the cookie belongs to the current page.
+
+        * Syntax    document.cookie = "username = John Doe; expires=Thu, 18 Dec 2013 12:00:00 UTC; path=/";
+
+---
+
+* JSON.stringify(todos) 
+    * is a method that converts a JavaScript object or array
+    * (in this case, the todos variable) into a JSON string.
+
+    * Convert the list of todo items (probably stored as an array of objects) into a string format
+    * Store this string representation in browser storage (like cookies or localStorage)
+
+    * const todos = [
+        { id: 1, text: "Buy groceries" },
+        { id: 2, text: "Finish homework" }
+    ];
+
+    After applying JSON.stringify(todos), it becomes:
+    "[{\"id\":1,\"text\":\"Buy groceries\"},{\"id\":2,\"text\":\"Finish homework\"}]"
+
+---
+
+* .children gives all the HTML elements inside that container (each individual todo item)
+* .length tell how many todo items there are
+ .children[i] accesses a specific todo item element (the first, second, etc.)
+ .textContent gets just the text inside that element (like "working" or "studying")
+ todos.push() adds that text to your array
+
+---
+
+ document.createElement
+
+ Example:
+    // Create a new <li> element
+    const newItem = document.createElement('li');
+
+    // Add some text to it
+    newItem.textContent = "Learn JavaScript";
+
+    // Optionally add a class
+    newItem.classList.add("todo-item");
+
+    // Append it to an existing list
+    const todoList = document.getElementById("todo-list");
+    todoList.appendChild(newItem);
+
+---
+
+* savedTodos 
+    * contains a JSON string retrieved from cookie 
+    * (something like "[\"working\",\"studying\",\"sleeping\"]")
+
+    * JSON.parse() 
+    * converts this string back into a JavaScript array that your code can work with
+    * The result is stored in the todos variable, which becomes: ["working", "studying", "sleeping"]
+
+
+    * When saving: JavaScript Array → JSON String (with stringify)
+    * When loading: JSON String → JavaScript Array (with parse)
+
+
+---
+
+try...catch?
+    * way to handle errors in JavaScript so your code doesn’t break if something goes wrong.
+
+    * try { ... } → contains the code that might throw an error.
+    * catch (e) { ... } → runs if an error happens inside try. e contains information about the error.
+
+    Example:
+    try 
+    {
+        var data = JSON.parse("invalid JSON"); // This will fail
+    } 
+    catch (e) 
+    {
+        console.log("There was an error:", e);
+    }
+
+---
+
+JSON (JavaScript Object Notation) 
+    lightweight data interchange format that's easy for humans to read and write 
+    and easy for machines to parse and generate.
+
+    * A text-based format that is language independent
+    * Derived from JavaScript object syntax, but distinct from it
+    * Uses simple conventions that programmers are already familiar with
+
+    Structure
+        {
+            "name": "John",
+            "age": 30,
+            "city": "New York"
+        }
+    Usage
+        API Communication: Most web APIs send and receive data in JSON format
+        Data Storage: Often used for configuration files and data persistence (like your todo list)
+        Data Exchange: Transfers data between server and web applications
+
+        JSON.stringify(): Converts JavaScript objects to JSON strings
+        JSON.parse(): Converts JSON strings back to JavaScript objects
+
+---
+
+DOM manipulation
+    is the process of interacting with the DOM API 
+    or change or modify an HTML document that will be displayed in a web browser. 
+    By manipulating the DOM, we can create web applications that update the data 
+    in a web page without refreshing the page.
+
+
+---
+
+jQuery
+    * JavaScript library
+    * to make working with JavaScript easier, faster, and more consistent across browsers.
+
+    * Simplifies DOM manipulation: 
+        * Instead of writing long document.getElementById() or document.querySelector(), 
+        * you can use a short and easy syntax like $('#myElement').
+
+    * Cross-browser compatibility: 
+        * It hides browser quirks (like old Internet Explorer issues) so your code works everywhere.
+
+    * Event handling: 
+        * Makes adding and removing event listeners shorter and easier.
+
+    * Animations: 
+        * Includes built-in effects like .fadeIn(), .slideUp(), etc.
+
+    * AJAX requests: 
+        * Makes it easier to load data from a server without reloading the page
+
+
+---
+
+Event
+    *  something that happens in the browser —  
+    * an action or occurrence that your code can "listen for" and respond to
+
+    * Example: click, dblclick, keyup, change, submit, load
+
+---
+

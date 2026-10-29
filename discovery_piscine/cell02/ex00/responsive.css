@@ -1,0 +1,26 @@
+body {
+    display:flex; 
+    justify-content:center;
+    font-family: monospace;
+    color: whitesmoke;
+    text-shadow: 2px 2px 4px rgba(0,0,0,5);
+}
+table {
+    border: solid black;
+    border-collapse: collapse;
+    height: 100px; 
+    width: 800px; 
+}
+td {
+    border: solid black;
+    width: 400px; 
+    text-align: center; 
+}
+.cell_left
+{
+    background-color:  #3C3C3C;
+}
+.cell_right
+{
+    background-color: #DAB732;
+}

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Explode This Balloon</title>
+    <style>
+        body {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: radial-gradient(circle at 50% 50%, #1b2735, #090a0f);
+            /* background-color: whitesmoke; */
+        }
+
+        #balloon {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            background-color: red;
+            box-shadow: 0 0 25px 8px rgb(0, 0, 0, 0.6);
+            cursor: pointer;
+            transition: all 0.2s; 
+        }
+    </style>
+  <script>
+        let size = 200;
+        let color = "red";
+
+        function grow_balloon() 
+        {
+            size += 10;
+            if (size > 420) 
+                size = 200;
+            if (color === "red") 
+                color = "green";
+            if (color === "green") 
+                color = "blue";
+            else 
+                color = "red";
+            update_balloon();
+        }
+
+        function shrink_balloon() {
+            size -= 5;
+            if (size < 200) 
+                size = 200;
+            if (color === "red") 
+                color = "blue";
+            if (color === "green") 
+                color = "red";
+            else 
+                color = "green";
+            update_balloon();
+        }
+
+        function update_balloon() {
+            let balloon = document.getElementById("balloon");
+            balloon.style.width = size + "px";
+            balloon.style.height = size + "px";
+            balloon.style.backgroundColor = color;
+        }
+    </script>
+</head>
+<body>
+    <div id="balloon" onclick="grow_balloon()" onmouseleave="shrink_balloon()"></div>
+</body>
+</html>

@@ -1,0 +1,23 @@
+body {
+    background-color: rgb(34, 39, 38);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+button {
+    font-family: courier;
+    font-size: 20px;
+    border: 4px solid white;
+    padding: 20px 40px;
+    color: #ffff;
+    background-color: transparent;
+    border-radius: 10px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    cursor: pointer;
+}

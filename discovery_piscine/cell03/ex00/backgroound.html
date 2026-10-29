@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Change Background</title>
+    <link rel="stylesheet" href="backgroound.css" />
+    <script>
+      function random_color() {
+        var red = Math.random() * 256;
+        var green = Math.random() * 256;
+        var blue = Math.random() * 256;
+
+        document.body.style.backgroundColor = `rgb(${red}, ${green}, ${blue})`;
+      }
+    </script>
+  </head>
+  <body>
+    <button onclick="random_color()">Click Me!</button>
+  </body>
+</html>
